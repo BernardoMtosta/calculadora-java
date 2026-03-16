@@ -6,13 +6,14 @@ public class Main {
 
         Scanner entrada = new Scanner(System.in);
         int escolha = 0;
-        while (escolha != 5) {
+        while (escolha != 6) {
             System.out.println("Bem vindo a calculadora, informe a opção que deseja");
             System.out.println("1 - soma");
             System.out.println("2 - subtração");
             System.out.println("3 - multiplicação");
             System.out.println("4 - divisão");
-            System.out.println("5 - sair");
+            System.out.println("5 - histórico");
+            System.out.println("6 - sair");
             escolha = entrada.nextInt();
 
             switch (escolha) {
@@ -21,7 +22,10 @@ public class Main {
                     double soma1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número:");
                     double soma2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + calc.somar(soma1, soma2));
+                    double resultado = calc.somar(soma1, soma2);
+                    System.out.println("Resultado: " + resultado);
+                    String operacao = soma1 + " + " + soma2 + " = " + resultado;
+                    calc.historico.add(operacao);
                     break;
 
                 case 2:
@@ -29,7 +33,10 @@ public class Main {
                     double sub1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double sub2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + calc.subtrair(sub1, sub2));
+                    resultado = calc.subtrair(sub1, sub2);
+                    System.out.println("Resultado: " + resultado);
+                    operacao = sub1 + " - " + sub2 + " = " + resultado;
+                    calc.historico.add(operacao);
                     break;
 
                 case 3:
@@ -53,8 +60,12 @@ public class Main {
                     break;
 
                 case 5:
+                    System.out.println(calc.historico);
+                    break;
+
+                case 6:
                     System.out.println("Saindo...");
-                    escolha = 5;
+                    escolha = 6;
                     break;
 
                 default:
