@@ -21,7 +21,7 @@ public class Main {
                     double soma1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número:");
                     double soma2 = entrada.nextDouble();
-                    System.out.println(calc.somar(soma1, soma2));
+                    System.out.println("Resultado: " + calc.somar(soma1, soma2));
                     break;
 
                 case 2:
@@ -29,7 +29,7 @@ public class Main {
                     double sub1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double sub2 = entrada.nextDouble();
-                    System.out.println(calc.subtrair(sub1, sub2));
+                    System.out.println("Resultado: " + calc.subtrair(sub1, sub2));
                     break;
 
                 case 3:
@@ -37,7 +37,7 @@ public class Main {
                     double mult1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double mult2 = entrada.nextDouble();
-                    System.out.println(calc.multiplicar(mult1, mult2));
+                    System.out.println("Resultado: " + calc.multiplicar(mult1, mult2));
                     break;
 
                 case 4:
@@ -49,7 +49,7 @@ public class Main {
                         System.out.println("erro!");
                         break;
                     }
-                    System.out.println(calc.dividir(div1, div2));
+                    System.out.println("Resultado: " + calc.dividir(div1, div2));
                     break;
 
                 case 5:
