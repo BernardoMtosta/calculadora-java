@@ -6,6 +6,18 @@ public class Calculadora {
         return a + b;
     }
 
+    public static int subtrair(int a , int b){
+        return a - b;
+    }
+
+    public static int mult(int a, int b){
+        return a * b;
+    }
+
+    public static double div(double a, double b){
+        return a / b;
+    }
+
     public static void main(String args[]){
 
         Scanner entrada = new Scanner(System.in);
@@ -33,21 +45,21 @@ public class Calculadora {
            int sub1 = entrada.nextInt();
            System.out.println("Informe o segundo número");
            int sub2 = entrada.nextInt();
-           System.out.println("Resultado = " + (sub1 - sub2));
+           System.out.println(subtrair(sub1, sub2));
        }
        if(escolha == 3){
            System.out.println("Informe o primeiro número");
            int mult1 = entrada.nextInt();
            System.out.println("Informe o segundo número");
            int mult2 = entrada.nextInt();
-           System.out.println("Resultado = " + (mult1 * mult2));
+           System.out.println(mult(mult1, mult2));
        }
        if(escolha == 4) {
            System.out.println("Iforme o primeiro número");
            Double div1 = entrada.nextDouble();
            System.out.println("Iforme o segundo número");
            Double div2 = entrada.nextDouble();
-           System.out.println("Resultado = " + (div1 / div2));
+           System.out.println(div(div1, div2));
        }
 
        if(escolha == 5){
