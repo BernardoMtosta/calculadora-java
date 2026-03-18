@@ -25,7 +25,7 @@ public class Main {
                     double resultado = calc.somar(soma1, soma2);
                     System.out.println("Resultado: " + resultado);
                     String operacao = soma1 + " + " + soma2 + " = " + resultado;
-                    calc.historico.add(operacao);
+                    calc.adicionarHistorico(operacao);
                     break;
 
                 case 2:
@@ -36,7 +36,7 @@ public class Main {
                     resultado = calc.subtrair(sub1, sub2);
                     System.out.println("Resultado: " + resultado);
                     operacao = sub1 + " - " + sub2 + " = " + resultado;
-                    calc.historico.add(operacao);
+                    calc.adicionarHistorico(operacao);
                     break;
 
                 case 3:
@@ -44,7 +44,10 @@ public class Main {
                     double mult1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double mult2 = entrada.nextDouble();
-                    System.out.println("Resultado: " + calc.multiplicar(mult1, mult2));
+                    resultado = calc.multiplicar(mult1, mult2);
+                    System.out.println("Resultado: " + resultado);
+                    operacao = mult1 + " - " + mult2 + " = " + resultado;
+                    calc.adicionarHistorico(operacao);
                     break;
 
                 case 4:
@@ -56,11 +59,14 @@ public class Main {
                         System.out.println("erro!");
                         break;
                     }
-                    System.out.println("Resultado: " + calc.dividir(div1, div2));
+                    resultado = calc.dividir(div1, div2);
+                    System.out.println("Resultado: " + resultado);
+                    operacao = div1 + " - " + div2 + " = " + resultado;
+                    calc.adicionarHistorico(operacao);
                     break;
 
                 case 5:
-                    System.out.println(calc.historico);
+                    System.out.println(calc.consultarHistorico();
                     break;
 
                 case 6:

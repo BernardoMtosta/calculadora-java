@@ -1,7 +1,15 @@
 import java.util.ArrayList;
 public class Calculadora {
 
-    ArrayList<String> historico = new ArrayList<String>();
+    private ArrayList<String> historico = new ArrayList<String>();
+
+    public  void adicionarHistorico(String add){
+        historico.add(add);
+    }
+
+    public String consultarHistorico(Integer get){
+        return historico.get(get);
+    }
 
     public double somar(double a, double b) {
         return a + b;
