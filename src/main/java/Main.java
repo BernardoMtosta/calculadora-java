@@ -46,7 +46,7 @@ public class Main {
                     double mult2 = entrada.nextDouble();
                     resultado = calc.multiplicar(mult1, mult2);
                     System.out.println("Resultado: " + resultado);
-                    operacao = mult1 + " - " + mult2 + " = " + resultado;
+                    operacao = mult1 + " * " + mult2 + " = " + resultado;
                     calc.adicionarHistorico(operacao);
                     break;
 
@@ -61,13 +61,14 @@ public class Main {
                     }
                     resultado = calc.dividir(div1, div2);
                     System.out.println("Resultado: " + resultado);
-                    operacao = div1 + " - " + div2 + " = " + resultado;
+                    operacao = div1 + " / " + div2 + " = " + resultado;
                     calc.adicionarHistorico(operacao);
                     break;
 
                 case 5:
-                    System.out.println(calc.consultarHistorico();
+                    calc.exibirHistorico();
                     break;
+
 
                 case 6:
                     System.out.println("Saindo...");
