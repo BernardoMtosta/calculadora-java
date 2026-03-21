@@ -3,6 +3,7 @@ public class Main {
     public static void main(String args[]) {
 
         Calculadora calc = new Calculadora();
+        Historico hist = new Historico();
 
         Scanner entrada = new Scanner(System.in);
         int escolha = 0;
@@ -25,7 +26,7 @@ public class Main {
                     double resultado = calc.somar(soma1, soma2);
                     System.out.println("Resultado: " + resultado);
                     String operacao = soma1 + " + " + soma2 + " = " + resultado;
-                    calc.adicionarHistorico(operacao);
+                    hist.adicionarHistorico(operacao);
                     break;
 
                 case 2:
@@ -36,7 +37,7 @@ public class Main {
                     resultado = calc.subtrair(sub1, sub2);
                     System.out.println("Resultado: " + resultado);
                     operacao = sub1 + " - " + sub2 + " = " + resultado;
-                    calc.adicionarHistorico(operacao);
+                    hist.adicionarHistorico(operacao);
                     break;
 
                 case 3:
@@ -47,7 +48,7 @@ public class Main {
                     resultado = calc.multiplicar(mult1, mult2);
                     System.out.println("Resultado: " + resultado);
                     operacao = mult1 + " * " + mult2 + " = " + resultado;
-                    calc.adicionarHistorico(operacao);
+                    hist.adicionarHistorico(operacao);
                     break;
 
                 case 4:
@@ -62,11 +63,11 @@ public class Main {
                     resultado = calc.dividir(div1, div2);
                     System.out.println("Resultado: " + resultado);
                     operacao = div1 + " / " + div2 + " = " + resultado;
-                    calc.adicionarHistorico(operacao);
+                    hist.adicionarHistorico(operacao);
                     break;
 
                 case 5:
-                    calc.exibirHistorico();
+                    hist.exibirHistorico();
                     break;
 
 
