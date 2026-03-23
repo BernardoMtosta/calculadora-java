@@ -25,8 +25,8 @@ public class Main {
                     double soma2 = entrada.nextDouble();
                     double resultado = calc.somar(soma1, soma2);
                     System.out.println("Resultado: " + resultado);
-                    String operacao = soma1 + " + " + soma2 + " = " + resultado;
-                    hist.adicionarHistorico(operacao);
+                    Operacao somas = new Operacao(soma1,"+" , soma2, resultado);
+                    hist.adicionarHistorico(somas);
                     break;
 
                 case 2:
@@ -36,8 +36,8 @@ public class Main {
                     double sub2 = entrada.nextDouble();
                     resultado = calc.subtrair(sub1, sub2);
                     System.out.println("Resultado: " + resultado);
-                    operacao = sub1 + " - " + sub2 + " = " + resultado;
-                    hist.adicionarHistorico(operacao);
+                    Operacao subs = new Operacao( sub1, "-" , sub2 , resultado);
+                    hist.adicionarHistorico(subs);
                     break;
 
                 case 3:
@@ -47,8 +47,8 @@ public class Main {
                     double mult2 = entrada.nextDouble();
                     resultado = calc.multiplicar(mult1, mult2);
                     System.out.println("Resultado: " + resultado);
-                    operacao = mult1 + " * " + mult2 + " = " + resultado;
-                    hist.adicionarHistorico(operacao);
+                    Operacao mults = new Operacao(mult1, "*" ,mult2,resultado);
+                    hist.adicionarHistorico(mults);
                     break;
 
                 case 4:
@@ -62,8 +62,8 @@ public class Main {
                     }
                     resultado = calc.dividir(div1, div2);
                     System.out.println("Resultado: " + resultado);
-                    operacao = div1 + " / " + div2 + " = " + resultado;
-                    hist.adicionarHistorico(operacao);
+                    Operacao divs = new Operacao( div1,"/" ,div2,resultado);
+                    hist.adicionarHistorico(divs);
                     break;
 
                 case 5:

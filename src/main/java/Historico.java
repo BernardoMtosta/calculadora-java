@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class Historico {
 
-    private ArrayList<String> historico = new ArrayList<String>();
+    private ArrayList<Operacao> historico = new ArrayList<Operacao>();
 
-    public  void adicionarHistorico(String add){
-        historico.add(add);
+    public  void adicionarHistorico(Operacao operacao){
+        historico.add(operacao);
     }
 
     public void  exibirHistorico(){
@@ -14,8 +14,8 @@ public class Historico {
         }else{
             System.out.println("===== HISTÓRICO =====\n");
             System.out.println("Total: " + historico.size() +" operações\n" );
-            for (String item : historico){
-                System.out.println(item);
+            for (Operacao operacao: historico){
+                System.out.println(operacao);
             }
             System.out.println("\n");
             System.out.println("===============");
