@@ -23,10 +23,9 @@ public class Main {
                     double soma1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número:");
                     double soma2 = entrada.nextDouble();
-                    double resultado = calc.somar(soma1, soma2);
-                    System.out.println("Resultado: " + resultado);
-                    Operacao somas = new Operacao(soma1,"+" , soma2, resultado);
-                    hist.adicionarHistorico(somas);
+                    Operacao salvar = calc.somarOperacao(soma1,soma2);
+                    System.out.println("Resultado: " + salvar);
+                    hist.adicionarHistorico(salvar);
                     break;
 
                 case 2:
@@ -34,7 +33,7 @@ public class Main {
                     double sub1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double sub2 = entrada.nextDouble();
-                    resultado = calc.subtrair(sub1, sub2);
+                    double resultado = calc.subtrair(sub1, sub2);
                     System.out.println("Resultado: " + resultado);
                     Operacao subs = new Operacao( sub1, "-" , sub2 , resultado);
                     hist.adicionarHistorico(subs);
