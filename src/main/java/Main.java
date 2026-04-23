@@ -5,7 +5,9 @@ public class Main {
         Calculadora calc = new Calculadora();
         Historico hist = new Historico();
 
+
         Scanner entrada = new Scanner(System.in);
+
         int escolha = 0;
         while (escolha != 6) {
             System.out.println("Bem vindo a calculadora, informe a opção que deseja");
@@ -23,9 +25,9 @@ public class Main {
                     double soma1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número:");
                     double soma2 = entrada.nextDouble();
-                    Operacao salvar = calc.somarOperacao(soma1,soma2);
-                    System.out.println("Resultado: " + salvar);
-                    hist.adicionarHistorico(salvar);
+                    Operacao salvarad = calc.somarOperacao(soma1,soma2);
+                    System.out.println("Resultado: " + salvarad);
+                    hist.adicionarHistorico(salvarad);
                     break;
 
                 case 2:
@@ -33,10 +35,9 @@ public class Main {
                     double sub1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double sub2 = entrada.nextDouble();
-                    double resultado = calc.subtrair(sub1, sub2);
-                    System.out.println("Resultado: " + resultado);
-                    Operacao subs = new Operacao( sub1, "-" , sub2 , resultado);
-                    hist.adicionarHistorico(subs);
+                    Operacao salvarsub = calc.subtrairOperacao(sub1,sub2);
+                    System.out.println("Resultado: " + salvarsub);
+                    hist.adicionarHistorico(salvarsub);
                     break;
 
                 case 3:
@@ -44,10 +45,9 @@ public class Main {
                     double mult1 = entrada.nextDouble();
                     System.out.println("Informe o segundo número");
                     double mult2 = entrada.nextDouble();
-                    resultado = calc.multiplicar(mult1, mult2);
-                    System.out.println("Resultado: " + resultado);
-                    Operacao mults = new Operacao(mult1, "*" ,mult2,resultado);
-                    hist.adicionarHistorico(mults);
+                    Operacao salvarmult = calc.multiplicarOperacao(mult1,mult2);
+                    System.out.println("Resultado: " + salvarmult);
+                    hist.adicionarHistorico(salvarmult);
                     break;
 
                 case 4:
@@ -59,10 +59,9 @@ public class Main {
                         System.out.println("erro!");
                         break;
                     }
-                    resultado = calc.dividir(div1, div2);
-                    System.out.println("Resultado: " + resultado);
-                    Operacao divs = new Operacao( div1,"/" ,div2,resultado);
-                    hist.adicionarHistorico(divs);
+                    Operacao salvardiv = calc.dividirOperacao(div1,div2);
+                    System.out.println("Resultado: " + salvardiv);
+                    hist.adicionarHistorico(salvardiv);
                     break;
 
                 case 5:

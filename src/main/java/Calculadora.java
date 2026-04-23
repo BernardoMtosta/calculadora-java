@@ -18,4 +18,22 @@ public class Calculadora {
         return op;
     }
 
+    public Operacao subtrairOperacao(double a, double b){
+        double resultado = subtrair(a,b);
+        Operacao op = new Operacao(a, "-", b, resultado);
+        return op;
+    }
+
+    public Operacao multiplicarOperacao(double a, double b){
+        double resultado = multiplicar(a,b);
+        Operacao op = new Operacao(a,"*" , b , resultado);
+        return op;
+    }
+
+    public Operacao dividirOperacao(double a, double b){
+        double resultado = dividir(a,b);
+        Operacao op = new Operacao(a, "/", b, resultado);
+        return  op;
+    }
+
 }
